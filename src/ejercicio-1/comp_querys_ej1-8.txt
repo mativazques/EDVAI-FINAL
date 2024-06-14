@@ -1,0 +1,68 @@
+SELECT DISTINCT
+    v.fecha,
+    v.horautc,
+    CASE 
+        WHEN v.tipo_de_movimiento = 'Despegue' THEN v.aeropuerto 
+        ELSE v.origen_destino 
+    END AS codigo_aeropuerto_salida,
+    ad_salida.ref AS ciudad_salida,
+    CASE 
+        WHEN v.tipo_de_movimiento = 'Aterrizaje' THEN v.aeropuerto 
+        ELSE v.origen_destino 
+    END AS codigo_aeropuerto_arribo,
+    ad_arribo.ref AS ciudad_arribo,
+    v.pasajeros
+FROM
+    vuelos v
+LEFT JOIN 
+    aeropuertos_detalles ad_salida ON ad_salida.aeropuerto = CASE 
+                                                            WHEN v.tipo_de_movimiento = 'Despegue' THEN v.aeropuerto 
+                                                            ELSE v.origen_destino 
+                                                         END
+LEFT JOIN 
+    aeropuertos_detalles ad_arribo ON ad_arribo.aeropuerto = CASE 
+                                                            WHEN v.tipo_de_movimiento = 'Aterrizaje' THEN v.aeropuerto 
+                                                            ELSE v.origen_destino 
+                                                         END
+WHERE
+    fecha BETWEEN "2022-01-01" AND "2022-06-30"
+ORDER BY
+    v.fecha DESC; 
+    
+Time taken: 17.714 seconds, Fetched: 187795 row(s)
+
+SELECT DISTINCT
+    v.fecha,
+    v.horautc,
+    v.codigo_aeropuerto_salida,
+    ad_salida.ref AS ciudad_salida,
+    v.codigo_aeropuerto_arribo,
+    ad_arribo.ref AS ciudad_arribo,
+    v.pasajeros
+FROM
+    (
+        SELECT  
+            fecha,
+            horautc,
+            CASE 
+                WHEN tipo_de_movimiento = 'Despegue' THEN aeropuerto 
+                ELSE origen_destino 
+            END AS codigo_aeropuerto_salida,
+            CASE 
+                WHEN tipo_de_movimiento = 'Aterrizaje' THEN aeropuerto 
+                ELSE origen_destino 
+            END AS codigo_aeropuerto_arribo,
+            pasajeros
+        FROM
+            vuelos
+        WHERE
+            fecha BETWEEN "2022-01-01" AND "2022-06-30"
+    ) v
+LEFT JOIN 
+    aeropuertos_detalles ad_salida ON ad_salida.aeropuerto = v.codigo_aeropuerto_salida
+LEFT JOIN 
+    aeropuertos_detalles ad_arribo ON ad_arribo.aeropuerto = v.codigo_aeropuerto_arribo
+ORDER BY
+    v.fecha DESC;
+    
+Time taken: 18.824 seconds, Fetched: 187795 row(s)
