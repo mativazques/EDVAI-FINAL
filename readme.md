@@ -5,6 +5,7 @@ La Administración Nacional de Aviación Civil necesita una serie de informes pa
 ![img/readme/AVION.jpg](img/readme/AVION.jpg)
 
 ## Tareas 
+
 **1.** Hacer ingest de los siguientes archivos relacionados con el transporte aéreo de Argentina.
 
 **Resolución:** Los archivos de la ingesta son: 
@@ -89,6 +90,12 @@ El archivo aeropuertos_detalle.csv → en la tabla aeropuerto_detalles_tabla
 
 ![img/ejercicio-1/5_vuelos.png](img/ejercicio-1/5_vuelos.png)
 ![img/ejercicio-1/5_aeropuertos_detalles.png](img/ejercicio-1/5_aeropuertos_detalles.png)
+
+## Arquitectura
+
+La implementación del proyecto puede verse de manera gráfica a continuación: 
+
+![img/readme/arq.png](img/readme/arq.png)
 
 **6.** Determinar la cantidad de vuelos entre las fechas 01/12/2021 y 31/01/2022. Mostrar consulta y resultado de la query.
 
@@ -215,12 +222,18 @@ LIMIT 10;
 
 **11.** Qué datos externos agregarías a este dataset que mejorarían el análisis de los datos.
 
-El objetivo del proyecto es realizar informes acerca de los aterrizajes y despegues en todo el territorio argentino, con lo que creo que se podrían enriquecer estos informes agregando información sobre: 
+El objetivo del proyecto es realizar informes acerca de los aterrizajes y despegues en todo el territorio argentino, con lo que creo que se podrían enriquecer estos informes agregando información sobre:
 
-**Información meteorológica:** Permitiría correlacionar con las condiciones climáticas afectan a retrasos, cancelaciones y seguridad de los vuelos, con la finalidad de mejor la planificación ante estos eventos climáticos. Sería utilidad contar con datos de temperatura, vsibilidad, viento y precipitaciones en los aeropuertos de salida y arribo. 
+**Información meteorológica:** Permitiría correlacionar cómo las condiciones climáticas afectan a retrasos, cancelaciones y seguridad de los vuelos, con la finalidad de mejorar la planificación ante estos eventos climáticos. Sería útil contar con datos de temperatura, visibilidad, viento y precipitaciones en los aeropuertos de salida y arribo.
 
-****
+**Combustible y emisiones:** Permitiría analizar el impacto ambiental según cada vuelo o según cada grupo de vuelos. Los datos deberían ser de combustible y emisión de CO2.
+
+**Identificador de vuelo:** La información en la tabla de vuelos no cuenta con un identificador para cada vuelo. Este identificador permitiría poder cruzar la información del vuelo con tablas con datos demográficos de los tripulantes, con datos de los pilotos y personal de servicio, y con datos de precios de boletos en caso de vuelos civiles.
+
+**Datos de costos:** KPIs estándares en términos de vuelos como el costo por milla de asiento disponible (CASM), costo por pasajero embarcado (CPE), costo operativo directo por hora bloque (DOC) y el costo de mantenimiento por hora de vuelo, serían posibles si se tuvieran datos de los costos operativos totales, costos de mantenimiento totales y el número de asientos que una compañía aérea pone a disposición por cada milla que un avión de esta recorre.
 
 **12.** Elabora tus conclusiones y recomendaciones sobre este proyecto.
+
+
 
 **13.** Proponer una arquitectura alternativa para este proceso, ya sea con herramientas on-premise o en la nube (si aplica).
