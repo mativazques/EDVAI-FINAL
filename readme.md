@@ -98,13 +98,16 @@ La implementación del proyecto puede verse de manera gráfica a continuación:
 ![img/readme/arq.png](img/readme/arq.png)
 
 **6.** Determinar la cantidad de vuelos entre las fechas 01/12/2021 y 31/01/2022. Mostrar consulta y resultado de la query.
+
 **7.** Cantidad de pasajeros que viajaron en Aerolíneas Argentinas entre el 01/01/2021 y el 30/06/2022. Mostrar consulta y resultado de la query.
+
 **8.** Mostrar fecha, hora, código aeropuerto de salida, ciudad de salida, código de aeropuerto de arribo, ciudad de arribo y cantidad de pasajeros de cada vuelo, entre el 01/01/2022 y el 30/06/2022, ordenados por fecha de manera descendente. Mostrar consulta y resultado de la query.
+
 **9.** Cuáles son las 10 aerolíneas que más pasajeros llevaron entre el 01/01/2021 y el 30/06/2022, exceptuando aquellas aerolíneas que no tengan nombre. Mostrar consulta y visualización.
+
 **10.** Cuáles son las 10 aeronaves más utilizadas entre el 01/01/2021 y el 30/06/2022 que despegaron desde la Ciudad Autónoma de Buenos Aires o desde Buenos Aires, exceptuando aquellas aeronaves que no cuentan con nombre. Mostrar consulta y visualización.
 
-**Resolución:** 
-
+**Resolución 6, 7, 8, 9 y 10:** 
 [queries-1.md](src/ejercicio-1/queries/queries-1.md)
 
 **11.** Qué datos externos agregarías a este dataset que mejorarían el análisis de los datos.
