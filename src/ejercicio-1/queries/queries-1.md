@@ -11,6 +11,8 @@ WHERE
     fecha BETWEEN "2021-12-01" AND "2022-01-31";
 ```
 
+![img/6_count.png](img/6_count.png)
+
 **7.** Cantidad de pasajeros que viajaron en Aerolíneas Argentinas entre el 01/01/2021 y el 30/06/2022. Mostrar consulta y resultado de la query.
 
 **Resolución:** 
