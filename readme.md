@@ -317,6 +317,8 @@ d. Mostrar por año, cuántos alquileres se hicieron, teniendo en cuenta automó
 e. Las 5 ciudades con más alquileres de vehículos ecológicos (fuelType híbrido o eléctrico).
 f. El promedio de reviews, segmentando por tipo de combustible.
 
+[queries-2.md](src\ejercicio-2\queries\queries-2.md)
+
 ### 6. Elabore sus conclusiones y recomendaciones sobre este proyecto.
 
 ### 7. Proponer una arquitectura alternativa para este proceso ya sea con herramientas on premise o cloud (si aplica).
