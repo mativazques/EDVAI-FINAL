@@ -98,127 +98,14 @@ La implementación del proyecto puede verse de manera gráfica a continuación:
 ![img/readme/arq.png](img/readme/arq.png)
 
 **6.** Determinar la cantidad de vuelos entre las fechas 01/12/2021 y 31/01/2022. Mostrar consulta y resultado de la query.
-
-**Resolución:** 
-
-```sql
-SELECT 
-    COUNT(*)
-FROM
-    vuelos
-WHERE
-    fecha BETWEEN "2021-12-01" AND "2022-01-31";
-```
-
 **7.** Cantidad de pasajeros que viajaron en Aerolíneas Argentinas entre el 01/01/2021 y el 30/06/2022. Mostrar consulta y resultado de la query.
-
-**Resolución:** 
-
-```
-SELECT 
-    SUM(pasajeros)
-FROM 
-    vuelos
-WHERE 
-    aerolinea_nombre="AEROLINEAS ARGENTINAS SA"
-AND
-    fecha BETWEEN "2021-01-01" AND "2022-06-30";
-```
-
-![img/ejercicio-1/7_pasajeros.png](img/ejercicio-1/7_pasajeros.png)
-
 **8.** Mostrar fecha, hora, código aeropuerto de salida, ciudad de salida, código de aeropuerto de arribo, ciudad de arribo y cantidad de pasajeros de cada vuelo, entre el 01/01/2022 y el 30/06/2022, ordenados por fecha de manera descendente. Mostrar consulta y resultado de la query.
-
-**Resolución:** 
-
-```
-SELECT DISTINCT
-    v.fecha,
-    v.horautc,
-    CASE 
-        WHEN v.tipo_de_movimiento = 'Despegue' THEN v.aeropuerto 
-        ELSE v.origen_destino 
-    END AS codigo_aeropuerto_salida,
-    ad_salida.ref AS ciudad_salida,
-    CASE 
-        WHEN v.tipo_de_movimiento = 'Aterrizaje' THEN v.aeropuerto 
-        ELSE v.origen_destino 
-    END AS codigo_aeropuerto_arribo,
-    ad_arribo.ref AS ciudad_arribo,
-    v.pasajeros
-FROM
-    vuelos v
-
-LEFT JOIN 
-    aeropuertos_detalles ad_salida 
-ON 
-    ad_salida.aeropuerto = CASE 
-                            WHEN v.tipo_de_movimiento = 'Despegue' THEN v.aeropuerto 
-                            ELSE v.origen_destino 
-                            END
-LEFT JOIN 
-    aeropuertos_detalles ad_arribo 
-ON ad_arribo.aeropuerto = CASE 
-                            WHEN v.tipo_de_movimiento = 'Aterrizaje' THEN v.aeropuerto 
-                            ELSE v.origen_destino 
-                            END
-WHERE
-    fecha BETWEEN "2022-01-01" AND "2022-06-30"
-ORDER BY
-    v.fecha DESC;
-```
-![img/ejercicio-1/8_origen_destino.png](img/ejercicio-1/8_origen_destino.png)
-
 **9.** Cuáles son las 10 aerolíneas que más pasajeros llevaron entre el 01/01/2021 y el 30/06/2022, exceptuando aquellas aerolíneas que no tengan nombre. Mostrar consulta y visualización.
-
-**Resolución:** 
-
-```
-SELECT DISTINCT 
-    aerolinea_nombre,
-    SUM(pasajeros) OVER(PARTITION BY aerolinea_nombre) pasajeros_sum
-FROM 
-    vuelos
-WHERE 
-    aerolinea_nombre IS NOT NULL
-AND
-    aerolinea_nombre != '0'
-AND
-    fecha BETWEEN "2021-01-01" AND "2022-06-30"
-ORDER BY 
-    pasajeros_sum DESC
-LIMIT 10;
-```
-
-![img/ejercicio-1/9_top_sum_pasajeros.png](img/ejercicio-1/9_top_sum_pasajeros.png)
-
 **10.** Cuáles son las 10 aeronaves más utilizadas entre el 01/01/2021 y el 30/06/2022 que despegaron desde la Ciudad Autónoma de Buenos Aires o desde Buenos Aires, exceptuando aquellas aeronaves que no cuentan con nombre. Mostrar consulta y visualización.
 
 **Resolución:** 
 
-```
-SELECT DISTINCT
-    v.aeronave,
-    COUNT(v.aeronave) OVER(PARTITION BY aeronave) aeronave_sum
-FROM
-    vuelos v
-LEFT JOIN
-    aeropuertos_detalles ad
-ON ad.aeropuerto = v.aeropuerto
-WHERE 
-    tipo_de_movimiento = 'Despegue'
-AND
-    fecha BETWEEN "2021-01-01" AND "2022-06-30"
-AND 
-    ad.provincia LIKE '%BUENOS AIRES' 
-AND
-    v.aeronave != '0'
-ORDER BY 
-    aeronave_sum DESC
-LIMIT 10;
-```
-
-![img/ejercicio-1/10_aeronaves.png](img/ejercicio-1/10_aeronaves.png)
+[queries-1.md](src/ejercicio-1/queries/queries-1.md)
 
 **11.** Qué datos externos agregarías a este dataset que mejorarían el análisis de los datos.
 
@@ -308,13 +195,18 @@ Finalmente insertar en Hive el resultado.
 a. Un DAG padre que ingeste los archivos y luego llame al DAG hijo.
 b. Un DAG hijo que procese la información y la cargue en Hive.
 
-### 5. Por medio de consultas SQL al data-warehouse, mostrar:
+### 5. Por medio de consultas SQL al data warehouse, mostrar:
 
 a. Cantidad de alquileres de autos, teniendo en cuenta sólo los vehículos ecológicos (fuelType híbrido o eléctrico) y con un rating de al menos 4.
+
 b. Los 5 estados con menor cantidad de alquileres (crear visualización).
+
 c. Los 10 modelos (junto con su marca) de autos más rentados (crear visualización).
+
 d. Mostrar por año, cuántos alquileres se hicieron, teniendo en cuenta automóviles fabricados desde 2010 a 2015.
+
 e. Las 5 ciudades con más alquileres de vehículos ecológicos (fuelType híbrido o eléctrico).
+
 f. El promedio de reviews, segmentando por tipo de combustible.
 
 [queries-2.md](src/ejercicio-2/queries/queries-2.md)
