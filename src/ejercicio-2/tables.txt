@@ -1,0 +1,18 @@
+CREATE DATABASE car_rental_db;
+
+CREATE TABLE car_rental_analytics(
+    fuelType            string,
+    rating              int,
+    renterTripsTaken    int,
+    reviewCount         int,
+    city                string,
+    state_name          string,
+    owner_id            int,
+    rate_daily          int,
+    make                string,
+    model               string,
+    year                int
+)
+COMMENT 'Tabla con informacion de los autos en renta.'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',';

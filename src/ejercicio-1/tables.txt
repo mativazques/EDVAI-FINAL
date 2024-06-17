@@ -39,7 +39,7 @@ CREATE TABLE aeropuertos_detalles(
     concesionado string,
     provincia string
 )
-COMMENT 'Vuelos en territorio argentino del 2021 y 2022.'
+COMMENT 'Detalles de los aeropuertos en Argentina.'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ',';
 
