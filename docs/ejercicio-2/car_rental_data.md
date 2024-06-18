@@ -36,7 +36,7 @@ wget -P ruta_destino -O ruta_destino/nombre_archivo.csv ruta_al_archivo
 ```
 
 **Resolución:** El archivo de la ingesta es: 
-[ingest-car_rental_data.sh](../../src\ejercicio-2\ingest\ingest-car_rental_data.sh)
+[ingest-car_rental_data.sh](../../src/ejercicio-2/ingest/ingest-car_rental_data.sh)
 
 
 ### 3. Crear un script para tomar el archivo desde HDFS y hacer las siguientes transformaciones:
