@@ -83,6 +83,12 @@ f. El promedio de reviews, segmentando por tipo de combustible.
 
 **Resolución:** [Queries](queries/queries-2.md)
 
+**Visualización:** Para la visualización se exportó un .csv ([car_rental.csv](docs/ejercicio-2/car_rental.csv)) desde Spark después de las transformaciones pedidas para poder hacer las visualizaciones en Power BI. 
+
+El archivo de la visualización en Power BI: [Alquiler de automóviles](docs/ejercicio-2/Alquiler_de_automoviles.pbix)
+
+![pbi](img/pbi.png)
+
 ### 6. Elabore sus conclusiones y recomendaciones sobre este proyecto.
 
 ### 7. Proponer una arquitectura alternativa para este proceso ya sea con herramientas on premise o cloud (si aplica).
