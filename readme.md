@@ -269,3 +269,16 @@ https://www.cloudskillsboost.google/focuses/4415?catalog_rank=%7B%22rank%22%3A1%
 10. ¿Cómo se puede garantizar la calidad de los datos en Dataprep de GCP?
 
 **Resolución:** [Respuestas Google Skills Boost](src/ejercicio-3/respuestas.md)
+
+
+# Ejercicio 4: Arquitectura 
+
+El gerente de Analítica te pide realizar una arquitectura hecha en GCP que contemple el uso de esta herramienta, ya que le parece muy fácil de usar y tiene una interfaz visual que ayuda a sus desarrolladores, ya que no necesitan conocer ningún lenguaje de desarrollo.
+
+Esta arquitectura debería contemplar las siguientes etapas:
+
+**1. Ingesta**: datos parquet almacenados en un bucket de S3 y datos de una aplicación que guarda sus datos en Cloud SQL.
+**2. Procesamiento**: filtrar, limpiar y procesar datos provenientes de estas fuentes.
+**3. Almacenamiento**: almacenar los datos procesados en BigQuery.
+**4. BI**: herramientas para visualizar la información almacenada en el Data Warehouse.
+**5. ML**: herramienta para construir un modelo de regresión lineal con la información almacenada en el Data Warehouse.
