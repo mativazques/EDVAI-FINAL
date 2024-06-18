@@ -171,6 +171,10 @@ Como Data Engineer debe crear y automatizar el pipeline para tener como resultad
 | model            | string  |
 | year             | integer |
 
+**Resolución:** En el archivo [tables.txt](src/ejercicio-2/tables.txt) se puede ver el código para crear la base de datos y la tabla solicitadas en Hive. 
+
+![img/ejercicio-2/1.png](img/ejercicio-2/1.png)
+
 ### 2. Crear script para el ingest de estos dos files
 
 - [https://edvaibucket.blob.core.windows.net/data-engineer-edvai/CarRentalData.csv?sp=r&st=2023-11-06T12:52:39Z&se=2025-11-06T20:52:39Z&sv=2022-11-02&sr=c&sig=J4Ddi2c7Ep23OhQLPisbYaerlH472iigPwc1%2FkG80EM%3D](https://edvaibucket.blob.core.windows.net/data-engineer-edvai/CarRentalData.csv?sp=r&st=2023-11-06T12:52:39Z&se=2025-11-06T20:52:39Z&sv=2022-11-02&sr=c&sig=J4Ddi2c7Ep23OhQLPisbYaerlH472iigPwc1%2FkG80EM%3D)
@@ -181,6 +185,9 @@ Como Data Engineer debe crear y automatizar el pipeline para tener como resultad
 ```bash
 wget -P ruta_destino -O ruta_destino/nombre_archivo.csv ruta_al_archivo
 ```
+
+**Resolución:** El archivo de la ingesta es: 
+[ingest-car_rental_data.sh](src/ejercicio-2/ingest/ingest-car_rental_data.sh)
 
 ### 3. Crear un script para tomar el archivo desde HDFS y hacer las siguientes transformaciones:
 
@@ -193,10 +200,19 @@ wget -P ruta_destino -O ruta_destino/nombre_archivo.csv ruta_al_archivo
 
 Finalmente insertar en Hive el resultado.
 
+**Resolución:** El archivo donde se realizan las transformaciones es: 
+[etl_car_rental_data.py](src/ejercicio-2/etl/etl_car_rental_data.py)
+
 ### 4. Realizar un proceso automático en Airflow que orqueste los pipelines creados en los puntos anteriores. Crear dos tareas:
 
 a. Un DAG padre que ingeste los archivos y luego llame al DAG hijo.
 b. Un DAG hijo que procese la información y la cargue en Hive.
+
+**Resolución:** Los archivos con los dag son: 
+
+[ejercicio_final_2_dag_padre.py](src/ejercicio-2/dag/ejercicio_final_2_dag_padre.py)
+
+[ejercicio_final_2_dag_hijo.py](src/ejercicio-2/dag/ejercicio_final_2_dag_hijo.py)
 
 ### 5. Por medio de consultas SQL al data warehouse, mostrar:
 
@@ -212,7 +228,7 @@ e. Las 5 ciudades con más alquileres de vehículos ecológicos (fuelType híbri
 
 f. El promedio de reviews, segmentando por tipo de combustible.
 
-[queries-2.md](src/ejercicio-2/queries/queries-2.md)
+**Resolución:** [queries-2.md](src/ejercicio-2/queries/queries-2.md)
 
 ### 6. Elabore sus conclusiones y recomendaciones sobre este proyecto.
 
