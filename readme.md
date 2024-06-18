@@ -214,6 +214,9 @@ b. Un DAG hijo que procese la información y la cargue en Hive.
 
 [ejercicio_final_2_dag_hijo.py](src/ejercicio-2/dag/ejercicio_final_2_dag_hijo.py)
 
+![img/ejercicio-2/4_padre.png](img/ejercicio-2/4_padre.png)
+![img/ejercicio-2/4_hijo.png](img/ejercicio-2/4_hijo.png)
+
 ### 5. Por medio de consultas SQL al data warehouse, mostrar:
 
 a. Cantidad de alquileres de autos, teniendo en cuenta sólo los vehículos ecológicos (fuelType híbrido o eléctrico) y con un rating de al menos 4.
