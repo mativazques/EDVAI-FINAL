@@ -40,8 +40,7 @@ https://www.cloudskillsboost.google/focuses/4415?catalog_rank=%7B%22rank%22%3A1%
 9. ¿Qué tipos de visualizaciones se pueden crear en Dataprep de GCP?
 10. ¿Cómo se puede garantizar la calidad de los datos en Dataprep de GCP?
 
-**Resolución:** [Respuestas Google Skills Boost](src/ejercicio-3/respuestas.md)
-
+**Resolución:** [Respuestas Google Skills Boost](docs/ejercicio-3/respuestas.md)
 
 # Ejercicio 4: Arquitectura 
 

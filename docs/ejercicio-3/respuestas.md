@@ -1,4 +1,4 @@
-## Preguntas sobre Dataprep
+# Ejercicio 3: Google Skills Boost - Dataprep
 
 ![dataprep.png](img/dataprep.png)
 
