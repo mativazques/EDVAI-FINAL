@@ -2,7 +2,7 @@
 
 La Administración Nacional de Aviación Civil necesita una serie de informes para elevar al Ministerio de Transporte acerca de los aterrizajes y despegues en todo el territorio argentino, como por ejemplo: cuáles aviones son los que más volaron, cuántos pasajeros volaron, ciudades de partidas y aterrizajes entre fechas determinadas, etc. Usted, como data engineer, deberá realizar un pipeline con esta información, automatizarlo y realizar los análisis de datos solicitados que permitan responder las preguntas de negocio y hacer sus recomendaciones con respecto al estado actual.
 
-![AVION.jpg](docs/img/readme/AVION.png)
+![AVION.jpg](docs/img/readme/AVION1.png)
 
 **Consignas y resolución:** [Aviación Civil](docs/ejercicio-1/aviacion.md)
 
