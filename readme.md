@@ -58,4 +58,4 @@ Esta arquitectura debería contemplar las siguientes etapas:
 
 **5. ML**: herramienta para construir un modelo de regresión lineal con la información almacenada en el Data Warehouse.
 
-**Resolución:** [Arquitectura](src/ejercicio-4/arquitectura.md)
+**Resolución:** [Arquitectura](docs/ejercicio-4/arquitectura.md)
