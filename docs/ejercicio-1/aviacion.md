@@ -131,7 +131,7 @@ Hubo un número significativo de vuelos durante este período, lo que podría in
 
 Aerolíneas Argentinas transportó una cantidad considerable de pasajeros en este período de tiempo, confirmando su papel predominante en el mercado. Seguido están firmemente FlyBondi y JetSmart, que muestran su gran ocupación del mercado en el segmento de los vuelos a menor costo.
 
-**Recomendación:** fortalecer alianzas estratégicas para mejorar los servicios y optimizar rutas, de modo que cada aerolínea, desde el segmento de clientes que ocupa, aumente sus operaciones.
+**Recomendación:** fortalecer alianzas estratégicas para mejorar los servicios y optimizar rutas, de modo que cada aerolínea desde el segmento de clientes que ocupa, aumente sus operaciones.
 
 #### Detalles de vuelos entre 01/01/2022 y 30/06/2022:
 
