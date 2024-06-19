@@ -120,13 +120,12 @@ El objetivo del proyecto es realizar informes acerca de los aterrizajes y despeg
 
 ### **12.** Elabora tus conclusiones y recomendaciones sobre este proyecto.
 
-# Conclusiones a partir de las consultas y recomendaciones para nuevas queries
 
 #### Cantidad de vuelos entre 01/12/2021 y 31/01/2022:
 
 Hubo un número significativo de vuelos durante este período, lo que podría indicar una alta demanda de viajes durante la temporada de vacaciones de fin de año y verano.
 
-**Recomendación:** durante próximas temporadas similares a esta, se podría ajustar la capacidad operativa (personal, aeronaves) para manejar la gran demanda.
+**Recomendación:** durante próximas temporadas similares a esta, se podría ajustar la capacidad operativa (personal, aeronaves) para ofrecer un mejor servicio a la gran demanda.
 
 #### Top 10 aerolíneas por pasajeros transportados entre 01/01/2021 y 30/06/2022:
 
@@ -142,7 +141,7 @@ La información detallada de vuelos (fechas, horarios, aeropuertos de salida y l
 
 #### Top 10 aeronaves más utilizadas en Buenos Aires entre 01/01/2021 y 30/06/2022:
 
-Algunas aeronaves como CR-150-L, CE-152, CE-150-M, son utilizadas con mayor frecuencia, lo que indica su popularidad y posiblemente su eficiencia.
+Algunas aeronaves como EMB-ERJ190100IGW, CR-150-L, CE-152, CE-150-M, son utilizadas con mayor frecuencia, lo que indica su popularidad y posiblemente su eficiencia.
 
 **Recomendación:** evaluar el rendimiento y costos de operación de estas aeronaves para optimizar la flota y considerar su uso en otras rutas.
 
