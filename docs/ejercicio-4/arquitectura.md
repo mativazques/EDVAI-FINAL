@@ -22,7 +22,7 @@ Esta arquitectura debería contemplar las siguientes etapas:
 
 **Datos de Cloud SQL:** también con Cloud Composer se va a automatizar la exportación de datos desde Cloud SQL a GCS. Esto se puede realizar mediante operadores de Airflow como MySqlToGCSOperator o PostgresToGCSOperator.
 
-**Google Cloud Storage (GCS):** como destino de los datos datos exportados desde Cloud SQL como los datos transferidos desde S3, se utilizará un bucket de GCS que actúa como una área de staging.
+**Google Cloud Storage (GCS):** como destino de los datos exportados desde Cloud SQL como los datos transferidos desde S3, se utilizará un bucket de GCS que actúa como una área de staging.
 
 ### 2. Procesamiento
 
