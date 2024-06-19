@@ -17,7 +17,7 @@ WHERE
 
 **Resolución:** 
 
-```
+```sql
 SELECT 
     SUM(pasajeros)
 FROM 
@@ -34,7 +34,7 @@ AND
 
 **Resolución:** 
 
-```
+```sql
 SELECT DISTINCT
     v.fecha,
     v.horautc,
@@ -76,7 +76,7 @@ ORDER BY
 
 **Resolución:** 
 
-```
+```sql
 SELECT DISTINCT 
     aerolinea_nombre,
     SUM(pasajeros) OVER(PARTITION BY aerolinea_nombre) pasajeros_sum
@@ -99,7 +99,7 @@ LIMIT 10;
 
 **Resolución:** 
 
-```
+```sql
 SELECT DISTINCT
     v.aeronave,
     COUNT(v.aeronave) OVER(PARTITION BY aeronave) aeronave_sum

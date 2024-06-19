@@ -31,7 +31,7 @@ df_final = df_total_filtered.fillna({"Pasajeros":0})
 
 df_final.createOrReplaceTempView("df_final_view")
 
-#df_final.show()
+df_final.show()
 #df_final.select("Clasificación Vuelo").distinct().show()
 
 spark.sql("insert into transporte_aereo_argentino.vuelos select * from df_final_view")
