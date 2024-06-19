@@ -95,7 +95,7 @@ El archivo de la visualización en Power BI: [Alquiler de automóviles](docs/eje
 
 El alquiler en modelos ecológicos (híbridos y eléctricos) que representan un 15% de la demanda total con un rating entre 4 y 5. 
 
-**Recomendación:** si se quiere aumentar la demanda de autos ecológicos para que reprensente mayor parte de la demanda se debe fortalecer la flota de vehículos. 
+**Recomendación:** si se quiere aumentar la demanda de autos ecológicos para que represente mayor parte de la demanda se debe fortalecer la flota de vehículos. 
 
 #### Segmentación por lugar:
 
