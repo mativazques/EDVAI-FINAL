@@ -1,8 +1,8 @@
-from airflow.operators.trigger_dagrun import TriggerDagRunOperator
+from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.operators.empty import EmptyOperator
 from airflow.utils.dates import days_ago
-from airflow import DAG
 
 default_args = {
     'owner': 'airflow',
@@ -22,13 +22,13 @@ t0 = EmptyOperator(
     dag=dag
 )
 
-t1 = BashOperator(
+ingest_car_rental_data = BashOperator(
     task_id='ingest_car_rental_data',
     bash_command='/usr/bin/sh /home/hadoop/scripts/final/ejercicio_2/ingest/ingest-car_rental_data.sh ',
     dag=dag
 )
 
-t2 = TriggerDagRunOperator(
+trigger_dag = TriggerDagRunOperator(
     task_id='trigger_dag',
     trigger_dag_id='ejercicio-final-2-dag-hijo',
     dag=dag
@@ -39,5 +39,4 @@ t3 = EmptyOperator(
     dag=dag
 )
 
-# Secuencia de tareas
 t0 >> ingest_car_rental_data >> trigger_dag >> t3

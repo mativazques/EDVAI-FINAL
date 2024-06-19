@@ -1,7 +1,7 @@
-from airflow.operators.empty_operator import EmptyOperator
+from airflow import DAG
+from airflow.operators.bash_operator import BashOperator
 from airflow.operators.empty import EmptyOperator
 from airflow.utils.dates import days_ago
-from airflow import DAG
 
 default_args = {
     'owner': 'airflow',

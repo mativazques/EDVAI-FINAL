@@ -1,12 +1,12 @@
 from pyspark.sql.functions import round
-from pyspark.sql.session import SparkSession 
+from pyspark.sql.session import SparkSession
 
 spark = SparkSession.builder \
     .appName("titanic ETL") \
     .config("spark.sql.catalog.Implementation", "hive") \
     .enableHiveSupport() \
     .getOrCreate()
-    
+
 df_car_rental_data = spark.read.option("header","true").csv("hdfs://172.17.0.2:9000/ingest/car_rental_data/CarRentalData.csv")
 df_geo_ref = spark.read.option("header","true").option("delimiter",";").csv("hdfs://172.17.0.2:9000/ingest/car_rental_data/georef.csv")
 df_car_rental_data.createOrReplaceTempView("vw_car_rental_data")

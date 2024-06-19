@@ -1,4 +1,4 @@
-from dag.ejercicio_final_1 import DAG
+from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.empty import EmptyOperator
@@ -20,7 +20,7 @@ with DAG(
     schedule_interval='@daily',
     start_date=days_ago(1),
     tags=['edvai'],
-) as dag:   
+) as dag:
     comienza_proceso = EmptyOperator(
         task_id='comienza_proceso',
     )
@@ -29,7 +29,7 @@ with DAG(
         task_id='finaliza_proceso',
     )
 
-    with TaskGroup(group_id='Ingest') as Ingest:        
+    with TaskGroup(group_id='Ingest') as Ingest:
         extract_vuelos_2021 = BashOperator(
             task_id='extract_vuelos_2021',
             bash_command='/usr/bin/sh /home/hadoop/scripts/final/ejercicio_1/ingest/ingest-2021.sh ',
@@ -44,7 +44,7 @@ with DAG(
             task_id='extract_aeropuertos_detalles',
             bash_command='/usr/bin/sh /home/hadoop/scripts/final/ejercicio_1/ingest/ingest-details.sh ',
         )
-        
+
     with TaskGroup('ETL') as ETL:
         processing_vuelos = BashOperator(
             task_id='processing_vuelos',
