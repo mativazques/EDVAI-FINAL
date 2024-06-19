@@ -91,8 +91,26 @@ El archivo de la visualización en Power BI: [Alquiler de automóviles](docs/eje
 
 ### 6. Elabore sus conclusiones y recomendaciones sobre este proyecto.
 
+#### Alquileres de automóviles ecológicos:
+
+El alquiler en modelos ecológicos (híbridos y eléctricos) que representan un 15% de la demanda total con un rating entre 4 y 5. 
+
+**Recomendación:** si se quiere aumentar la demanda de autos ecológicos para que reprensente mayor parte de la demanda se debe fortalecer la flota de vehículos. 
+
+#### Segmentación por lugar:
+
+San Diego, Las Vegas, Los Angeles, San Francisco y Portland son las ciudades con más alquileres de vehículos ecológicos. Estados como Montana y Arkansas tienen la menor cantidad de alquileres.
+
+**Recomendación:** la compañía se debe enfocar en estrategias de marketing y promociones en las ciudades con más demanda para maximizar ingresos. Analizar las razones de baja demanda en ciertos estados y ajustar la oferta o estrategias de mercado en consecuencia.
+
+#### Segmentación por marca y modelo de automóvil:
+
+Modelos como Tesla Model 3 y Ford Mustang son los más rentados, lo que indica la popularidad de ciertas marcas y modelos entre los clientes.
+
+**Recomendación:** hay que mantener una flota bien abastecida de los modelos más populares y evaluar la incorporación de nuevos modelos de estas marcas para satisfacer la demanda y atraer nuevos clientes.
+
 ### 7. Proponer una arquitectura alternativa para este proceso ya sea con herramientas on premise o cloud (si aplica).
 
-**Resolución:** Una arquitectura alternativa puede ser como cualquiera de las que plantee en el punto anterior. 
+**Resolución:** Por la similitud en los pipelines, una arquitectura alternativa puede ser como cualquiera de las que se plantearon en el ejercicio 1. 
 
-En ambos casos, en la parte de la ingesta desde la web, y puesta en HDFS, también se puede utilizar Apache Nifi. 
+Como alternativa extra, en ambos ejercicios: en la parte de la ingesta desde otro proveedor cloud, y puesta en HDFS, también se puede utilizar Apache Nifi. 
