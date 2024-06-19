@@ -120,6 +120,39 @@ El objetivo del proyecto es realizar informes acerca de los aterrizajes y despeg
 
 ### **12.** Elabora tus conclusiones y recomendaciones sobre este proyecto.
 
+# Conclusiones a partir de las consultas y recomendaciones para nuevas queries
+
+#### Cantidad de vuelos entre 01/12/2021 y 31/01/2022:
+
+Hubo un número significativo de vuelos durante este período, lo que podría indicar una alta demanda de viajes durante la temporada de vacaciones de fin de año y verano.
+
+**Recomendación:** durante próximas temporadas similares a esta, se podría ajustar la capacidad operativa (personal, aeronaves) para manejar la gran demanda.
+
+#### Top 10 aerolíneas por pasajeros transportados entre 01/01/2021 y 30/06/2022:
+
+Aerolíneas Argentinas transportó una cantidad considerable de pasajeros en este período de tiempo, confirmando su papel predominante en el mercado. Seguido están firmemente FlyBondi y JetSmart, que muestran su gran ocupación del mercado en el segmento de los vuelos a menor costo.
+
+**Recomendación:** fortalecer alianzas estratégicas para mejorar los servicios y optimizar rutas, de modo que cada aerolínea, desde el segmento de clientes que ocupa, aumente sus operaciones.
+
+#### Detalles de vuelos entre 01/01/2022 y 30/06/2022:
+
+La información detallada de vuelos (fechas, horarios, aeropuertos de salida y llegada, cantidad de pasajeros) proporciona una visión de la operativa diaria.
+
+**Recomendación:** se pueden utilizar estos datos para mejorar la programación de vuelos, minimizar tiempos de espera y optimizar el uso de aeropuertos.
+
+#### Top 10 aeronaves más utilizadas en Buenos Aires entre 01/01/2021 y 30/06/2022:
+
+Algunas aeronaves como CR-150-L, CE-152, CE-150-M, son utilizadas con mayor frecuencia, lo que indica su popularidad y posiblemente su eficiencia.
+
+**Recomendación:** evaluar el rendimiento y costos de operación de estas aeronaves para optimizar la flota y considerar su uso en otras rutas.
+
+#### Nuevas consultas
+
+Como última recomendación, pueden realizarse más consultas que son interesantes para el negocio tales como:
+
+- **Evolución mensual del número de vuelos:** para analizar tendencias y estacionalidades en el número de vuelos y planificar recursos de manera proactiva.
+- **Impacto de condiciones meteorológicas en los vuelos:** cruzar los datos referidos a los vuelos con información de condiciones climáticas para desarrollar estrategias ante condiciones adversas.
+- **Estadísticos referidos a la ocupación de los vuelos:** medidas como media, mediana y distribuciones pueden ser útiles para el estudio de la ocupación de los vuelos, mejorando la eficiencia de la oferta de vuelos en función de la demanda real.
 
 
 ### **13.** Proponer una arquitectura alternativa para este proceso, ya sea con herramientas on-premise o en la nube (si aplica).
