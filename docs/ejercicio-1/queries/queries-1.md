@@ -93,7 +93,13 @@ ORDER BY
 LIMIT 10;
 ```
 
-![img/9_top_sum_pasajeros.png](img/9_top_sum_pasajeros.png)
+![img/9.png](img/9_top_sum_pasajeros.png)
+
+Visualización: 
+
+Por la gran diferencia entre la cantidad de pasajeros transportados por las diferentes aerolíneas, se aplicó una escala logarítmica al eje de Cantidad de pasajeros, para que puedan ser visibles las barras de todas las aerolíneas en el gráfico. 
+
+![img/9.png](img/9.png)
 
 **10.** Cuáles son las 10 aeronaves más utilizadas entre el 01/01/2021 y el 30/06/2022 que despegaron desde la Ciudad Autónoma de Buenos Aires o desde Buenos Aires, exceptuando aquellas aeronaves que no cuentan con nombre. Mostrar consulta y visualización.
 
@@ -122,3 +128,7 @@ LIMIT 10;
 ```
 
 ![img/10_aeronaves.png](img/10_aeronaves.png)
+
+Visualización:
+
+![img/10.png](img/10.png)
