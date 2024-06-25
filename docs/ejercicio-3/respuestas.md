@@ -63,3 +63,38 @@ Datos estructurados (csv, parquet, avro, etc.), datos semi estructurados (JSON, 
 3. Limpiar los datos: Eliminar valores duplicados, corregir errores ortográficos, formatear fechas y horas, estandarizar valores de texto.
 4. Transformar los datos: Filtrar, agregar, eliminar, ordenar, unir y agregar campos a tus datos.
 5. Guardar conjuntos de datos: Guarde los datos transformados en Cloud Storage o BigQuery para su acceso posterior.
+
+
+### **8.** ¿Cómo se pueden automatizar tareas de preparación de datos en Dataprep de GCP?
+
+La preparación de datos se puede automatizar mediante el uso de las "Recetas" (Recipes).
+
+Las recetas son conjuntos de pasos de transformación que se pueden guardar y aplicar a nuevos conjuntos de datos.
+
+Para crear una receta, primero hay que crear un flujo de datos con las transformaciones que se quieren automatizar y después guardar el flujo de datos como una receta.
+
+Una vez que se tiene la receta, se puede aplicarla a nuevos conjuntos de datos con la función "Ejecutar receta".
+
+### **9.** ¿Qué tipos de visualizaciones se pueden crear en Dataprep de GCP?
+
+Dataprep te permite utilizar los siguientes tipos de visualizaciones:
+
+**Gráficos de dispersión:** para mostrar la relación entre dos variables.
+
+**Gráficos de barras:** para comparar valores de diferentes categorías.
+
+**Histogramas:** para mostrar la distribución de los valores de una variable.
+
+**Tablas de resumen:** para mostrar estadísticas descriptivas de los datos.
+
+### **10.** ¿Cómo se puede garantizar la calidad de los datos en Dataprep de GCP?
+
+Para garantizar la calidad de los datos en Dataprep, se puede poner atención en las siguientes secciones:
+
+Perfilado automático de datos: Cuando se carga un conjunto de datos en Dataprep, se genera un perfil de datos que proporciona estadísticas sobre los datos, como el recuento de valores nulos, duplicados y distribuciones de valores. Prestar especial atención a este apartado puede brindar una buena noción de la calidad de los datos. 
+
+Recomendaciones de transformaciones: Dataprep ofrece sugerencias para corregir el tipo de dato de la columna, formatos de fechas, eliminar duplicados, entre otras.
+
+Reglas de validación: Se pueden crear reglas de validación para verificar formatos de fecha específicos, valores dentro de un rango permitido, patrones de texto, etc.
+
+Trazabilidad: Dataprep permite rastrear todas las transformaciones, trabajos ejecutados y que usuario lo realizó. 
